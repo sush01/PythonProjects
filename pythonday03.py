@@ -273,6 +273,15 @@ class BankAccount:
     elif choice == "a":
       self.saldo += amount
       
+class SavingAccount(BankAccount):
+  
+      def __init__(self, name, saldo, id, saving):
+        self.name = name
+        self.saldo = saldo
+        self.id = id
+        self.saving = saving
+              
+      
 class CreditAccount(BankAccount):
   
       def __init__(self, name, saldo, id,credit):
@@ -301,6 +310,8 @@ accountlist.append(acount2)
 
 print(accountlist)
 for element in accountlist:
+  
+  
   element.accountInfo()   
 
 #add acount  
